@@ -1,9 +1,9 @@
-age = input("How old are you? ")
-try:
-    age = int(age)
-    if age >= 18:
-        print("You are adult.")
-    else:
-        print("You are infant")
-except ValueError:
-    print(f"{age} is not a number")
+def outer_func():
+    enclosing_var = "Я змінна в функції, що охоплює"
+
+    def inner_func():
+        print("Всередині вкладеної функції:", enclosing_var)
+
+    inner_func()
+
+outer_func()
