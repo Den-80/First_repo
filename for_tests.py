@@ -1,9 +1,11 @@
-def outer_func():
-    enclosing_var = "Я змінна в функції, що охоплює"
+def factorial(n):
+    if n < 2:
+        return 1
+    else:
+        return n * factorial(n - 1)
 
-    def inner_func():
-        print("Всередині вкладеної функції:", enclosing_var)
+def number_of_groups(n, k):
+    result = factorial(n)/(factorial(n-k)*factorial(k))
+    return print(int(result))
 
-    inner_func()
-
-outer_func()
+print(number_of_groups(50, 7))
